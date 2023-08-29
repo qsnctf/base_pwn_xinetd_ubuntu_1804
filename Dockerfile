@@ -44,15 +44,12 @@ RUN sed -i 's/archive.ubuntu.com/mirrors.nju.edu.cn/' /etc/apt/sources.list \
     # /var/lib/apt/lists/*
     && rm -rf /tmp/* /var/tmp/* \
 
-
-WORKDIR /home/ctf
-
-
 VOLUME /var/lib/tcpdump
 
 COPY pwn/ /home/ctf/
 
-EXPOSE 10000
+WORKDIR /home/ctf
 
+EXPOSE 10000
 
 CMD ["/start.sh"]

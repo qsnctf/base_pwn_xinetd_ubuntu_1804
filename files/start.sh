@@ -6,12 +6,12 @@ fi
 
 if [[ -f /home/ctf/pwn ]]; then
 	chown root:ctf /home/ctf/pwn
-	chmod 750 /home/ctf/pwn
+	chmod +x /home/ctf/pwn
 else
   if [[ -f /home/ctf/pwn.c ]]; then
     gcc -o /home/ctf/pwn /home/ctf/pwn.c
     chown root:ctf /home/ctf/pwn
-    chmod 750 /home/ctf/pwn
+    chmod +x /home/ctf/pwn
   fi
 fi
 
