@@ -2,7 +2,8 @@
 ## 环境
 Linux环境：Ubuntu 18.04\
 网络服务：Xinetd\
-额外插件：tcpdump
+额外插件：tcpdump\
+默认端口：10000
 
 
 
@@ -27,3 +28,6 @@ docker build -t name/challenges_name:version_tag .
 ```bash
 docker-compose build
 ```
+
+## 关于TCPDUMP
+如果你想启用TCPDUMP记录流量包，可以在docker-compose中删除volumes、environment的注释。
