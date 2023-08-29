@@ -1,0 +1,13 @@
+version: "3"
+services:
+  challenges:
+    build: .
+    image: qsnctf/base_pwn_xinetd_ubuntu_1804
+    ports:
+      - "80:80"
+    environment:
+      - FLAG=qsnctf{flag}
+    # volumes:
+    #   - ./tcpdump:/var/lib/tcpdump
+    # environment:
+    #   - TCPDUMP_ENABLE=1
